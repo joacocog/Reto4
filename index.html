@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El Oraculo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="body">
+
+        <main class="app-container">
+            <section class="home sections" id="home">
+                <header class="site-header">
+                    <a href="index.html">
+                        <img src="img/demonio.png" alt="Logo El Oraculo">
+
+                        <h1>El Oraculo</h1>
+                    </a>
+                </header>
+                <form action="#" class="names-form" id="gameForm">
+                    <h2>Ingresa los nombres</h2>
+
+                    <div class="label">
+                        <label for="player-1">Jugador 1</label>
+                        <input type="text" id="player-1">
+                    </div>
+
+                    <div class="label">
+                        <label for="player-2">Jugador 2</label>
+                    <input type="text" id="player-2">
+                    </div>
+
+                    <button id="jugarBtn">Jugar</button>
+                </form>
+
+                <div class="partidas-anteriores d-none" id="partidas-anteriores">
+                    <h2>Partidas Anteriores</h2>
+                    <ul class="guardadas" id="guardadas"> 
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="charge sections" id="charge">
+                <img src="img/carga.gif" alt="imagen de carga">
+            </section>
+
+            <section class="cartas sections" id="cartas">
+                <div class="carousel-cartas" >
+                    <div class="header-carousel">
+                        
+                        <div class="salir">
+                            <button id="salir">
+                                <p>✕</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner" id="carousel-cartas">
+                            
+                        </div>
+                        <div class="btn-container-continuar">
+                            <button type="button" class="continuar-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Continuar</button>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Que deseas hacer?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="tirar">Volver a tirar</button>
+                    <button type="button" class="btn btn-primary" id="ver-resultados">Ver Match</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <section class="results sections" id="results">
+            
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="js/cartas.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
