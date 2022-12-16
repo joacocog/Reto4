@@ -32,7 +32,7 @@ let resultsPage = document.getElementById('results');
 
 let match = '';
 let saveGames = [];
-let tempCards = [];
+let randomCards = [];
 let positionPart = 0;
 let guardada = false;
 
@@ -131,6 +131,16 @@ let imprimirAnt = ()=>{
         <button class="ver-mas" id="ver-mas">+</button>
     </li>
     `;
+
+    let btns = document.getElementsByClassName('ver-mas');
+
+    const conss = ()=>{
+        console.log(saveGames.player1);
+    }
+
+    Array.from(btns).forEach(function(btn) {
+        btn.addEventListener('click', conss);
+        });
 
 }
 
